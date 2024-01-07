@@ -27,6 +27,9 @@ public class ProdutosDAO {
         
         //conn = new conectaDAO().connectDB();
         
+        JOptionPane.showMessageDialog(null,"Produto inserido com sucesso");
+        
+        
         
     }
     
