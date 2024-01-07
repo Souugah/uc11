@@ -35,16 +35,16 @@ public class ProdutosDAO {
     } catch (Exception e) {
         JOptionPane.showMessageDialog(null, "Erro ao cadastrar produto: " + e.getMessage());
     } finally {
-        // Feche as conexões, por exemplo, prep.close(); e conn.close();
+        
     }
 }        
      
  
     
     public ArrayList<ProdutosDTO> listarProdutos(){
-       try {
+      try {
         conn = new conectaDAO().connectDB();
-        String sql = "SELECT * FROM tabela_produtos";
+        String sql = "SELECT * FROM produtos";
         prep = conn.prepareStatement(sql);
         resultset = prep.executeQuery();
 
@@ -61,10 +61,10 @@ public class ProdutosDAO {
     } catch (Exception e) {
         JOptionPane.showMessageDialog(null, "Erro ao listar produtos: " + e.getMessage());
     } finally {
-       
+        // Feche as conexões, por exemplo, prep.close(); e conn.close();
     }
     return listagem;
-}  
+}
       
     }
     
